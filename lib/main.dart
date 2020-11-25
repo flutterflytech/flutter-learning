@@ -5,9 +5,9 @@ import 'package:poc_flutter/home_screen.dart';
 import 'package:poc_flutter/listview_screen.dart';
 import 'package:poc_flutter/splash_screen.dart';
 
-    void main() => runApp(MyApp());
- // void main() => runApp(ListViewScreen());
-  //void main() => runApp(HomeScreen());
+     void main() => runApp(MyApp());
+  // void main() => runApp(ListViewScreen());
+  // void main() => runApp(HomeScreen());
 
 class MyApp extends StatefulWidget {
   @override
