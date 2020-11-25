@@ -98,7 +98,6 @@ class _MyAppState extends State<MyApp> {
                               onPressed: () {
                                 // Some code to undo the change.
                               },
-
                             );
                             Scaffold.of(context).showSnackBar(snackBar);
 
