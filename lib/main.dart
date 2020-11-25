@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:poc_flutter/listview_screen.dart';
 import 'package:poc_flutter/splash_screen.dart';
 
-    void main() => runApp(MyApp());
- // void main() => runApp(MySpashScreen());
+   // void main() => runApp(MyApp());
+  void main() => runApp(ListViewScreen());
 
 class MyApp extends StatefulWidget {
   @override

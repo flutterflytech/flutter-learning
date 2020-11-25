@@ -20,8 +20,8 @@ import 'package:flutter/services.dart';
                Center(
                  child: Image.network(
                    'https://images.unsplash.com/photo-1527769929977-c341ee9f2033?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2134&q=80',
-                   height: 50,
-                   width: 50,
+                   height: 100,
+                   width: 100,
                  ),
                ),
              ],
