@@ -10,6 +10,8 @@
    
    - ListView with Static Data - listview_screen.dart
 
+   - Dynamic ListView with dynamic data that can vary on runtime - dynamic_listview.dart
+
    <b>An Important Note</b>
     
     - To launch various screen just comment & uncomment others from the following

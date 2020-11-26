@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:poc_flutter/auth/dynamic_listview.dart';
 import 'package:poc_flutter/home_screen.dart';
 import 'package:poc_flutter/listview_screen.dart';
 import 'package:poc_flutter/splash_screen.dart';
 
-     void main() => runApp(MyApp());
+void main() => runApp(DynamicListViewScreen());
+     //void main() => runApp(MyApp());
   // void main() => runApp(ListViewScreen());
   // void main() => runApp(HomeScreen());
 
@@ -115,7 +117,7 @@ class _MyAppState extends State<MyApp> {
                               Container(
                                 color: Colors.red,
                                 height: 2.0,
-                                width: 130,
+                                width: 115,
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(
@@ -125,7 +127,7 @@ class _MyAppState extends State<MyApp> {
                               Container(
                                 color: Colors.red,
                                 height: 2.0,
-                                width: 130,
+                                width: 115,
                               ),
                             ],
                           ),
