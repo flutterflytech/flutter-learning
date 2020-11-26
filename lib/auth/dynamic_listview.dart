@@ -6,11 +6,49 @@ class DynamicListViewScreen extends StatefulWidget {
 }
 
 class _DynamicListViewScreenState extends State<DynamicListViewScreen> {
-  List<String> names = ["Alok 1", "Alok 2","Alok 3", "Alok 4","Alok 5", "Alok 6","Alok 7", "Alok 8","Alok 9", "Alok 10", "Alok 11"];
+  List<Employee> empList = new List<Employee>();
+
+  List<Employee> addData() {
+    int i = 1;
+
+    while (i <= 100) {
+      var employee = new Employee();
+      employee.empId = "EMP $i";
+      employee.empName = "Alok $i";
+      employee.profile = "Android Dev $i";
+      employee.exprience = 1;
+      empList.add(employee);
+      i++;
+
+      var employee1 = new Employee();
+      employee1.empId = "EMP $i";
+      employee1.empName = "Ashis $i";
+      employee1.profile = "android-flutter Dev $i";
+      employee1.exprience = 2;
+      empList.add(employee1);
+      i++;
+    }
+    return empList;
+  }
 
   // A Separate Function called from itemBuilder
   Widget buildBody(BuildContext ctxt, int index) {
-    return new Text(names[index]);
+    return ListTile(
+      title: Text("EmpId : ${empList[index].empId} \nName : ${empList[index].empName} "),
+      trailing: Icon(
+        Icons.account_balance_wallet,
+        color: Colors.red,
+        size: 40,
+      ),
+      subtitle: Text("Profile : ${empList[index].profile} .\nExprience : ${empList[index].exprience} ."),
+      leading: FlutterLogo(),
+    );
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    addData();
   }
 
   @override
@@ -20,16 +58,22 @@ class _DynamicListViewScreenState extends State<DynamicListViewScreen> {
       home: Scaffold(
         body: SafeArea(
           child: Container(
-            child: new ListView.builder
-              (
-                itemCount: names.length,
-                itemBuilder: (BuildContext ctxt, int index) => buildBody(ctxt, index)
-            ),
+            child: new ListView.builder(
+                itemCount: empList.length,
+                itemBuilder: (BuildContext ctxt, int index) =>
+                    buildBody(ctxt, index)),
           ),
         ),
       ),
     );
   }
+}
 
+/** Modal class for holding Employee data **/
 
+class Employee {
+  String empId;
+  String empName;
+  String profile;
+  int exprience;
 }

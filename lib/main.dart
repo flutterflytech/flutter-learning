@@ -2,14 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:poc_flutter/auth/dynamic_listview.dart';
-import 'package:poc_flutter/home_screen.dart';
-import 'package:poc_flutter/listview_screen.dart';
-import 'package:poc_flutter/splash_screen.dart';
 
-void main() => runApp(DynamicListViewScreen());
-     //void main() => runApp(MyApp());
-  // void main() => runApp(ListViewScreen());
-  // void main() => runApp(HomeScreen());
+
+    //  void main() => runApp(MyApp());
+   //   void main() => runApp(ListViewScreen());
+  //    void main() => runApp(HomeScreen());
+  void main() => runApp(DynamicListViewScreen());
 
 class MyApp extends StatefulWidget {
   @override
