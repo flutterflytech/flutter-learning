@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:poc_flutter/auth/PageRouter.dart';
 import 'package:poc_flutter/auth/dynamic_listview.dart';
+import 'package:poc_flutter/home_screen.dart';
 import 'package:poc_flutter/splash_screen.dart';
 
-
-     //  void main() => runApp(MyApp());
-    //   void main() => runApp(ListViewScreen());
-   //    void main() => runApp(HomeScreen());
-   //    void main() => runApp(DynamicListViewScreen());
-         void main() => runApp(MySpashScreen());
+//  void main() => runApp(MyApp());
+//   void main() => runApp(ListViewScreen());
+void main() => runApp(HomeScreen());
+//    void main() => runApp(DynamicListViewScreen());
+//void main() => runApp(MySpashScreen());
+//void main() => runApp(PageRouter());
 
 class MyApp extends StatefulWidget {
   @override
@@ -43,7 +45,7 @@ class _MyAppState extends State<MyApp> {
                             padding: const EdgeInsets.all(8.0),
                             child: Center(
                                 child: Image.network(
-                                  //'https://image.freepik.com/free-vector/blue-geometric-technological-background_1055-1907.jpg',
+                                    //'https://image.freepik.com/free-vector/blue-geometric-technological-background_1055-1907.jpg',
                                     'https://i.pinimg.com/originals/1c/aa/c5/1caac55143e3e11461c6ae5962403deb.jpg',
                                     height: 90,
                                     width: 120)),
@@ -56,13 +58,13 @@ class _MyAppState extends State<MyApp> {
                                 LengthLimitingTextInputFormatter(10),
                               ],
                               decoration: new InputDecoration(
-                                //border: InputBorder.none,
-                                //focusedBorder: InputBorder.none,
-                                //enabledBorder: InputBorder.none,
-                                //errorBorder: InputBorder.none,
-                                //disabledBorder: InputBorder.none,
-                                //contentPadding:
-                                // EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                                  //border: InputBorder.none,
+                                  //focusedBorder: InputBorder.none,
+                                  //enabledBorder: InputBorder.none,
+                                  //errorBorder: InputBorder.none,
+                                  //disabledBorder: InputBorder.none,
+                                  //contentPadding:
+                                  // EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
                                   hintText: "Enter Username ")),
                           Padding(
                             padding: const EdgeInsets.only(top: 18),
@@ -75,13 +77,13 @@ class _MyAppState extends State<MyApp> {
                                 LengthLimitingTextInputFormatter(10),
                               ],
                               decoration: new InputDecoration(
-                                //border: InputBorder.none,
-                                //focusedBorder: InputBorder.none,
-                                //enabledBorder: InputBorder.none,
-                                //errorBorder: InputBorder.none,
-                                //disabledBorder: InputBorder.none,
-                                //contentPadding:
-                                // EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
+                                  //border: InputBorder.none,
+                                  //focusedBorder: InputBorder.none,
+                                  //enabledBorder: InputBorder.none,
+                                  //errorBorder: InputBorder.none,
+                                  //disabledBorder: InputBorder.none,
+                                  //contentPadding:
+                                  // EdgeInsets.only(left: 15, bottom: 11, top: 11, right: 15),
                                   hintText: "Enter Password ")),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.end,
@@ -98,7 +100,7 @@ class _MyAppState extends State<MyApp> {
                           Center(
                             child: RaisedButton(
                               onPressed: () {
-                                 showToastMessage();
+                                showToastMessage();
                               },
                               shape: RoundedRectangleBorder(
                                   borderRadius: BorderRadius.circular(10)),
@@ -160,7 +162,6 @@ class _MyAppState extends State<MyApp> {
         ));
   }
 
-
   void showToastMessage() {
     Fluttertoast.showToast(
         msg: "Login Button was Clicked.....",
@@ -169,7 +170,6 @@ class _MyAppState extends State<MyApp> {
         timeInSecForIosWeb: 1,
         backgroundColor: Colors.grey,
         textColor: Colors.white,
-        fontSize: 16.0
-    );
+        fontSize: 16.0);
   }
 }
