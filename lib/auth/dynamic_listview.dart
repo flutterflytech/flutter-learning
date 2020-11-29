@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-/***
- * Dynamic listView - equivalent to RecyclerView in Android that can hold large no of dynaic data as list
- ****/
+/// Dynamic listView - equivalent to RecyclerView in Android that can hold large no of dynaic data as list
+
 class DynamicListViewScreen extends StatefulWidget {
   @override
   _DynamicListViewScreenState createState() => _DynamicListViewScreenState();
@@ -71,7 +70,7 @@ class _DynamicListViewScreenState extends State<DynamicListViewScreen> {
   }
 }
 
-/** Modal class for holding Employee data **/
+///Modal class for holding Employee data
 
 class Employee {
   String empId;

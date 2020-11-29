@@ -113,7 +113,7 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  /** Method for Navigating from one Activity to another **/
+  /// Method for Navigating from one Activity to another
   Route _createRoute() {
     return PageRouteBuilder(
       pageBuilder: (context, animation, secondaryAnimation) => MySpashScreen(),
