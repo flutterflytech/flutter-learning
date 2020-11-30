@@ -3,12 +3,12 @@ import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:poc_flutter/home_screen.dart';
 
-//  void main() => runApp(MyApp());
-//   void main() => runApp(ListViewScreen());
-void main() => runApp(HomeScreen());
-//    void main() => runApp(DynamicListViewScreen());
-//void main() => runApp(MySpashScreen());
-//void main() => runApp(PageRouter());
+  void main() => runApp(MyApp());
+// void main() => runApp(ListViewScreen());
+// void main() => runApp(HomeScreen());
+// void main() => runApp(DynamicListViewScreen());
+// void main() => runApp(MySpashScreen());
+// void main() => runApp(PageRouter());
 
 class MyApp extends StatefulWidget {
   @override
@@ -16,6 +16,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final uNameController = TextEditingController();
+  final pwdController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -49,6 +52,7 @@ class _MyAppState extends State<MyApp> {
                           ),
                           Text("UserName", textAlign: TextAlign.start),
                           TextField(
+                            controller: uNameController,
                               cursorColor: Colors.black,
                               obscureText: false,
                               inputFormatters: [
@@ -69,6 +73,7 @@ class _MyAppState extends State<MyApp> {
                           ),
                           TextField(
                               cursorColor: Colors.black,
+                              controller: pwdController,
                               obscureText: true,
                               inputFormatters: [
                                 LengthLimitingTextInputFormatter(10),
@@ -161,7 +166,7 @@ class _MyAppState extends State<MyApp> {
 
   void showToastMessage() {
     Fluttertoast.showToast(
-        msg: "Login Button was Clicked.....",
+        msg: "Username : "+uNameController.text+"\nPassword : "+pwdController.text,
         toastLength: Toast.LENGTH_SHORT,
         gravity: ToastGravity.BOTTOM,
         timeInSecForIosWeb: 1,

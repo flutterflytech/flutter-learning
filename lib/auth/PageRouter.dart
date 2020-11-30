@@ -1,37 +1,50 @@
 import 'package:flutter/material.dart';
 
+void main() {
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false,
+    title: 'Navigating between Screen Basics',
+    home: FirstRoute(),
+  ));
+}
 
-
-///UI for PageNo - 1
-class Page1 extends StatelessWidget {
+class FirstRoute extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Page",
-      home: Scaffold(
-        body: Container(
-
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Screen 1'),
+      ),
+      body: Center(
+        child: ElevatedButton(
+          child: Text('Navigate to Screen 2'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SecondRoute()),
+            );
+          },
         ),
       ),
     );
   }
 }
 
-Route _createRoute() {
-  return PageRouteBuilder(
-    /// like in android we are using intent to switch between activities
-    pageBuilder: (context, animation, secondaryAnimation) => Page2(),
-    transitionsBuilder: (context, animation, secondaryAnimation, child) {
-      return child;
-    },
-  );
-}
-
-/// UI for Page No 2
-class Page2 extends StatelessWidget {
+class SecondRoute extends StatelessWidget {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text("This is Screen 2"),
+      ),
       body: Center(
-        child: Text('This is Page No 2'),
+        child: ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context); // will keep current screen in stack and will navigate to next screen
+
+          },
+          child: Text('Go back to Previous Screen ! '),
+        ),
       ),
     );
   }
