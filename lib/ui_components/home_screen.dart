@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:poc_flutter/splash_screen.dart';
+import 'package:poc_flutter/ui_components/splash_screen.dart';
 
 import 'listview_screen.dart';
 
