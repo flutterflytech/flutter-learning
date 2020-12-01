@@ -51,13 +51,13 @@ class _EventHandlingState extends State<EventHandling> {
                           onPressed: () {
                             proceed("+");
                           }),
-                      SizedBox(height: 2.0, width: 3.0),
+                      SizedBox(height: 2.0, width: 1.0),
                       RaisedButton(
                           child: Text('Substract'),
                           onPressed: () {
                             proceed("-");
                           }),
-                      SizedBox(height: 2.0, width: 3.0),
+                      SizedBox(height: 2.0, width: 1.0),
                       RaisedButton(
                           child: Text('Multiply'),
                           onPressed: () {

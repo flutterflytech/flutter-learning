@@ -16,6 +16,8 @@
 
    - EventHandling - For Handling event like get the data enetered by user in TextFormField and display in toast on click of Button.
 
+   - DartCollection - This Dart class contains code that uses various method,constructors & properties of Dart Collection API.
+
    <b>An Important Note</b>
     
     - To launch various screen just comment & uncomment others from the following
