@@ -8,14 +8,14 @@ import 'package:poc_flutter/ui_components/home_screen.dart';
 import 'dynamic_listview.dart';
 import 'listview_screen.dart';
 
- // void main() => runApp(MyApp());
+  void main() => runApp(MyApp());
 //  void main() => runApp(ListViewScreen());
 //  void main() => runApp(HomeScreen());
 //  void main() => runApp(DynamicListViewScreen());
 //  void main() => runApp(MySpashScreen());
 //  void main() => runApp(PageRouter());
- void main() => runApp(EventHandling());
-//    void main() => runApp(WorkWithApi());
+// void main() => runApp(EventHandling());
+  // void main() => runApp(WorkWithApi());
 
 class MyApp extends StatefulWidget {
   @override

@@ -2,6 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 import 'dart:async';
+void main() => runApp(WorkWithApi());
+
+
 
 class WorkWithApi extends StatefulWidget {
   @override
@@ -14,20 +17,38 @@ class _WorkWithApiState extends State<WorkWithApi> {
     return MaterialApp(
       home: SafeArea(
         child: Scaffold(
-          body: Container(
-            child: new FutureBuilder(
-                future: fetchUsersFromGitHub(),
-                builder: (context, snap) {
-                  if (snap.hasData) {
-                    return new ListView.builder(
-                        itemCount: snap.data.length,
-                        itemBuilder: (context, index) {
+          body: Column(
+            children: [
+              Container(
+                child: RaisedButton(
+                  onPressed: (){
+                    fetchUsersFromGitHub();
+                  },
+                  child: Text('hvc'),
+                ),
 
-                        });
-                  } else if (snap.hasError) {
+                // child: new FutureBuilder(
+                //     future: fetchUsersFromGitHub(),
+                //     builder: (context, snap) {
+                //       if (snap.hasData) {
+                //         return new ListView.builder(
+                //             itemCount: snap.data.length,
+                //             itemBuilder: (context, index) {
+                //
+                //             });
+                //       } else if (snap.hasError) {
+                //
+                //       }
+                //     }),
+              ),
+              ListView.builder(
+                itemCount: 10,
+                  itemBuilder: (context, index){
+                  return ListTile(
 
-                  }
-                }),
+                  );
+                  })
+            ],
           ),
         ),
       ),

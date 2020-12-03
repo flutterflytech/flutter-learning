@@ -55,6 +55,26 @@ main() {
 
   MyCollectionDemo.add(MyCollectionDemo.growableList, 1);
   print("Single : ${MyCollectionDemo.growableList.single}");
+
+  MyCollectionDemo.growableList.addAll(["ABC","DEF","GHI","JKL","MNO","PQR"]);
+  print("List : ${MyCollectionDemo.growableList}");
+  
+  //print(MyCollectionDemo.growableList.any((element) => if))
+
+  print("asMap() : ${MyCollectionDemo.growableList.asMap()}");
+  var list =  [2.0,3.0,4.56] ;
+  print("cast() : ${list.cast()}");
+
+  print("contains() : ${MyCollectionDemo.growableList.contains("DEF")}");
+  print("ElementAt() 2 : ${MyCollectionDemo.growableList.elementAt(2)}");
+
+  print("every() : ${list.every((element) => element>1)}"); // will Check whether every element of this iterable satisfies
+  // print("expand() : ${list.expand((element) => )}"); // will Check whether every element of this iterable satisfies
+
+  print("expand() : ${MyCollectionDemo.growableList.expand((element) => [1,8]).toList()}"); /**Doubt where to use**/
+
+  MyCollectionDemo.growableList.fillRange(0,3,"Traffic");
+
 }
 
 class MyCollectionDemo {

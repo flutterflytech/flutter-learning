@@ -18,6 +18,13 @@
 
    - DartCollection - This Dart class contains code that uses various method,constructors & properties of Dart Collection API.
 
+   - Navigation using pushNamed method - Code for navigation using pushed Named method was added , the components of this class includes
+     navigation
+      -home.dart
+      -routs.dart
+      -signin.dart
+      -signup.dart
+
    <b>An Important Note</b>
     
     - To launch various screen just comment & uncomment others from the following
